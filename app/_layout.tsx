@@ -19,8 +19,9 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack screenOptions={{headerTitleAlign: "center"}}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs_hidden)/third" options={{title: "List Stuff"}} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
